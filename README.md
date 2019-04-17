@@ -2,9 +2,7 @@
 
 Python implementation of imooc course [玩转数据结构](https://coding.imooc.com/class/207.html), thanks for that great course (instructor [liuyubobobo](https://github.com/liuyubobobo)) !
 
-Any pull-request is welcome:)
-
-Any quesitons please email to wangzhe.dut@gmail.com
+Edited/learned based on wangzhe.dut@gmail.com git
 
 
 ### Included data structures
