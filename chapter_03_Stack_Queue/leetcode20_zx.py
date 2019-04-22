@@ -32,3 +32,4 @@ if __name__ == '__main__':
 
     input_str1 = '(]'
     print(Solution1.isValid(input_str1))
+
