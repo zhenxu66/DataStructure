@@ -1,3 +1,6 @@
+# change name from queue.py to queue.py (debug error)
+# You probably have a module called queue in your projects directories, which causes this issue, since the python standard library also includes a module with that name.
+# https://stackoverflow.com/questions/37181768/pycharm-debugger-fails-with-attributeerror
 from chapter_02_Array.array import Array
 from chapter_03_Stack_Queue.base import QueueBase
 
