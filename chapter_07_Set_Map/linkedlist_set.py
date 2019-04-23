@@ -16,6 +16,7 @@ class LinkedListSet(SetBase):
         return self._list.contains(e)
 
     def add(self, e):
+        # LinkedList make sure no duplicate, contains spend lots of time O(n)
         if self.contains(e):
             return
         self._list.add_first(e)
@@ -26,7 +27,7 @@ class LinkedListSet(SetBase):
 
 if __name__ == '__main__':
     words = ''
-    with open('./chapter_07_Set_Map/shakespeare.txt', 'r') as f:
+    with open('shakespeare.txt', 'r') as f:
         words = f.read()
     words = words.split()
 
@@ -39,7 +40,7 @@ if __name__ == '__main__':
     print('Total words: ', len(words))
     print('Unique words: ', bst_set.get_size())
     print('Contains word "they": ', bst_set.contains('they'))
-    ## 耗时100秒左右
+    # 耗时170秒左右
     print('Total time: {} seconds'.format(time() - start_time))
 
 
