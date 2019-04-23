@@ -1,6 +1,8 @@
 # https://happyparrot.blogspot.com/2018/07/leetcode-716-max-stack.html
 # http://www.cnblogs.com/Jason-Damon/archive/2012/04/18/2454649.html
 # https://www.cnblogs.com/bonelee/p/10090727.html
+
+# popMax or popMin is different
 class MaxStack:
 
     def __init__(self):
