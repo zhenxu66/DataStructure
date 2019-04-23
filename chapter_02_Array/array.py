@@ -1,5 +1,7 @@
 class Array:
     def __init__(self, arr=None, capacity=10):
+
+        # initialize with arr, used for Heapify a array
         if isinstance(arr, list):
             self._data = arr[:]
             self._size = len(arr)
@@ -94,6 +96,7 @@ class Array:
             new_data[i] = self._data[i]
         self._data = new_data
 
+    # used for heap add siftup
     def swap(self, i, j):
         if i < 0 or i >= self._size or j < 0 or j >= self._size:
             raise ValueError('Index is illegal.')
