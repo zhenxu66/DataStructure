@@ -11,7 +11,7 @@ class HashTable:
         self._hashtable = [defaultdict() for _ in range(M)]
         self._size = 0
 
-    def _hash(self, key):
+    def _hash(self, key):  # key do not have to be comparable in size
         return hash(key) % 0x7fffffff % self._M
 
     def get_size(self):
