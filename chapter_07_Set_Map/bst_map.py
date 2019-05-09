@@ -148,5 +148,6 @@ if __name__ == '__main__':
 
     bst_map.remove('they')
     print(bst_map.contains('they'))
+    print(bst_map.getter('they'))
     bst_map.setter('they', 100)
     print(bst_map.getter('they'))
