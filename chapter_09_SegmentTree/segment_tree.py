@@ -69,9 +69,12 @@ class SegmentTree:
         self._setter(0, 0, len(self._data) - 1, index, e)
 
     def _setter(self, tree_index, l, r, index, e):
+        # find the leaf with index
         if l == r:
             self._tree[tree_index] = e
             return
+
+        # if not, find from left_tree or right_tree
         mid = l + (r - l) // 2
         left_tree_index = self._left_child(tree_index)
         right_tree_index = self._right_child(tree_index)
@@ -79,6 +82,8 @@ class SegmentTree:
             self._setter(right_tree_index, mid + 1, r, index, e)
         else:
             self._setter(left_tree_index, l, mid, index, e)
+
+        # Once the leaf updated, current layer of tree will be updated/merged from left_tree and right_tree
         # 别忘了更新树上的该节点的值
         self._tree[tree_index] = self._merger(
             self._tree[left_tree_index],
@@ -103,5 +108,8 @@ if __name__ == '__main__':
     nums = [-2, 0, 3, -5, 2, -1]
     sum_merger = lambda a, b: a + b
     seg_tree = SegmentTree(arr=nums, merger=sum_merger)
+    print(seg_tree)
+    print(seg_tree.query(0, 3))
+    seg_tree.setter(0, -1)
     print(seg_tree)
     print(seg_tree.query(0, 3))
